@@ -1,0 +1,28 @@
+name: Trigger Central Sync Bot
+
+on:
+  push:
+    branches:
+      - main 
+
+jobs:
+  trigger_bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate App Token
+        id: app_token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.GH_APP_ID }}
+          private-key: ${{ secrets.GH_APP_PRIVATE_KEY }}
+          owner: chipfoundry 
+
+      - name: Dispatch Event to Sync Bot
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          # Use the short-lived App token
+          token: ${{ steps.app_token.outputs.token }} 
+          # Target the Controller Repository
+          repository: chipfoundry/sync-bot 
+          event-type: caravel-user-project-push
+          client-payload: '{"sha": "${{ github.sha }}"}'
