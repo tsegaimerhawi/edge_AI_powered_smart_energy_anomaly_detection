@@ -1,0 +1,21 @@
+{
+  "layer1": {
+    "inputs": 7,
+    "neurons": 32,
+    "weights_order": "neuron-major (W[0..IN-1, j] for j=0..H1-1)"
+  },
+  "layer2": {
+    "inputs": 32,
+    "neurons": 16,
+    "weights_order": "neuron-major (W[0..H1-1, j] for j=0..H2-1)"
+  },
+  "layer3": {
+    "inputs": 16,
+    "neurons": 4,
+    "weights_order": "neuron-major (W[0..H2-1, j] for j=0..O-1)"
+  },
+  "element_format": {
+    "int8_weight": "2-digit HEX per line, two's complement",
+    "int16_bias": "4-digit HEX per line, two's complement"
+  }
+}
