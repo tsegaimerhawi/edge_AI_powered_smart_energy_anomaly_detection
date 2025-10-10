@@ -1,8 +1,8 @@
-CARAVEL_ROOT: /usr/caravel_user_project/caravel
-MCW_ROOT: /usr/caravel_user_project/mgmt_core_wrapper
+CARAVEL_ROOT: /Users/merhawi/Documents/personal/projects/chipfoundry_projects/edge_AI_powered_smart_energy_anomaly_detection/caravel
+MCW_ROOT: /Users/merhawi/Documents/personal/projects/chipfoundry_projects/edge_AI_powered_smart_energy_anomaly_detection/mgmt_core_wrapper
 PDK: sky130A
-PDK_ROOT: /usr/pdk
-USER_PROJECT_ROOT: /usr/caravel_user_project
+PDK_ROOT: /Users/merhawi/Documents/personal/projects/chipfoundry_projects/edge_AI_powered_smart_energy_anomaly_detection/dependencies/pdks
+USER_PROJECT_ROOT: /Users/merhawi/Documents/personal/projects/chipfoundry_projects/edge_AI_powered_smart_energy_anomaly_detection
 caravan: false
 clk: 25
 emailto:
